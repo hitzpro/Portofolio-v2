@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wakhid Khoirul Aziz — Portofolio</title>
   <meta name="description" content="Portofolio Wakhid Khoirul Aziz, lulusan Sistem Informasi dengan fokus Web Development, Quality Assurance, dan UI/UX Design.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -43,18 +44,31 @@
   <svg class="shape s1" data-parallax="-12" viewBox="0 0 220 160" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="10" y="10" width="110" height="110"/><circle cx="130" cy="95" r="50"/><path d="M0 150h220M60 0v160"/></svg>
   <svg class="shape s2" data-parallax="-22" viewBox="0 0 200 160" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 140 100 20l80 120z"/><circle cx="100" cy="100" r="22"/><path d="M0 40h200M150 0v160"/></svg>
   <div class="container">
-    <div class="frame hero-in"><img src="assets/images/profile-placeholder.svg" alt="Foto profil (placeholder)" width="160" height="200" loading="lazy"></div>
-    <p class="muted-lg mb-2 hero-in">Information Technology Graduate</p>
-    <h1 class="mb-3 hero-in">Wakhid Khoirul Aziz</h1>
-    <p class="muted-lg mb-4 hero-in">Web Development | Quality Assurance | UI/UX Design</p>
-    <p class="prose mb-4 hero-in">Lulusan Sistem Informasi yang membangun antarmuka web, menguji agar berjalan sesuai kebutuhan, dan merancang tampilan yang mudah digunakan.</p>
-    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 hero-in">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="assets/documents/CV_Wakhid_Khoirul_Aziz.pdf" class="btn btn-outline" download>Download CV</a>
-    </div>
-    <div class="social hero-in">
-      <a href="https://github.com/hitzpro" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
-      <a href="https://linkedin.com/in/wakhid-khoirul-aziz-229028316" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7 order-2 order-lg-1">
+        <p class="muted-lg mb-2 hero-in">Information Technology Graduate</p>
+        <h1 class="mb-3 hero-in">Wakhid Khoirul Aziz</h1>
+        <p class="muted-lg mb-4 hero-in">Web Development | Quality Assurance | UI/UX Design</p>
+        <p class="prose mb-4 hero-in">Lulusan Sistem Informasi yang membangun antarmuka web, menguji agar berjalan sesuai kebutuhan, dan merancang tampilan yang mudah digunakan.</p>
+        <div class="d-flex flex-wrap gap-2 mb-4 hero-in">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="assets/documents/CV_Wakhid_Khoirul_Aziz.pdf" class="btn btn-outline" download>Download CV</a>
+        </div>
+        <div class="social hero-in">
+          <a href="https://github.com/hitzpro" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/wakhid-khoirul-aziz-229028316" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-5 order-1 order-lg-2 d-flex justify-content-center justify-content-lg-end hero-in">
+        <div class="tilt" data-tilt>
+          <div class="tilt-inner">
+            <div class="frame-lg">
+              <img src="assets/images/profile.jpg" alt="Foto Wakhid Khoirul Aziz" width="340" height="425" onerror="this.onerror=null;this.src='assets/images/profile-placeholder.svg'">
+              <span class="glare" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -80,35 +94,45 @@
 <section id="experience">
   <div class="container">
     <h2 data-reveal>Experience</h2>
-    <div class="ms-2">
-      <div class="job">
-        <h3>Laboratory Assistant — Information Technology</h3>
-        <p class="meta">Universitas Gunadarma | 2023–Present</p>
-        <ul>
-          <li>Mengajar dan mendampingi mahasiswa dalam praktikum Web Development, Python, Java, dan SQL.</li>
-          <li>Menyusun materi pembelajaran dan panduan praktikum.</li>
-          <li>Memeriksa dan mengevaluasi tugas praktikum.</li>
-          <li>Membantu troubleshooting permasalahan teknis.</li>
-          <li>Berkolaborasi dengan tim laboratorium.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <h3>Freelance Frontend Web Developer</h3>
-        <p class="meta">Fastwork | Project-Based</p>
-        <ul>
-          <li>Mengembangkan antarmuka website untuk kebutuhan operasional kafe dengan konsep Point of Sale.</li>
-          <li>Mengimplementasikan tampilan dan interaksi pengguna.</li>
-          <li>Menyesuaikan desain serta fungsionalitas berdasarkan kebutuhan klien.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <h3>Graphic Designer &amp; Video Editor</h3>
-        <p class="meta">Yayasan Al Barkah Katimaha | 2022</p>
-        <ul>
-          <li>Membuat poster, pamflet, dan media publikasi.</li>
-          <li>Menyunting video untuk dokumentasi dan publikasi.</li>
-          <li>Mendukung komunikasi visual melalui konten digital.</li>
-        </ul>
+    <div class="exp-stage">
+      <ol class="exp-nav" aria-hidden="true">
+        <li class="active"><span>2023–Present</span><strong>Universitas Gunadarma</strong></li>
+        <li><span>Project-Based</span><strong>Fastwork</strong></li>
+        <li><span>2022</span><strong>Yayasan Al Barkah Katimaha</strong></li>
+      </ol>
+      <div class="exp-main">
+        <p class="exp-count" aria-hidden="true">01 / 03</p>
+        <div class="exp-panels">
+          <article class="job">
+            <h3>Laboratory Assistant — Information Technology</h3>
+            <p class="meta">Universitas Gunadarma | 2023–Present</p>
+            <ul>
+              <li>Mengajar dan mendampingi mahasiswa dalam praktikum Web Development, Python, Java, dan SQL.</li>
+              <li>Menyusun materi pembelajaran dan panduan praktikum.</li>
+              <li>Memeriksa dan mengevaluasi tugas praktikum.</li>
+              <li>Membantu troubleshooting permasalahan teknis.</li>
+              <li>Berkolaborasi dengan tim laboratorium.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <h3>Freelance Frontend Web Developer</h3>
+            <p class="meta">Fastwork | Project-Based</p>
+            <ul>
+              <li>Mengembangkan antarmuka website untuk kebutuhan operasional kafe dengan konsep Point of Sale.</li>
+              <li>Mengimplementasikan tampilan dan interaksi pengguna.</li>
+              <li>Menyesuaikan desain serta fungsionalitas berdasarkan kebutuhan klien.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <h3>Graphic Designer &amp; Video Editor</h3>
+            <p class="meta">Yayasan Al Barkah Katimaha | 2022</p>
+            <ul>
+              <li>Membuat poster, pamflet, dan media publikasi.</li>
+              <li>Menyunting video untuk dokumentasi dan publikasi.</li>
+              <li>Mendukung komunikasi visual melalui konten digital.</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </div>
   </div>
@@ -117,24 +141,52 @@
 <section id="projects">
   <div class="container">
     <h2 data-reveal>Projects</h2>
-    <div class="proj">
-      <h3>AI-Powered Web Chatbot Integrated with Moodle</h3>
-      <p class="prose">Chatbot berbasis web yang terintegrasi dengan Moodle REST API menggunakan pendekatan Retrieval-Augmented Generation (RAG). Mencakup analisis kebutuhan, frontend, backend, integrasi API, dan pengujian aplikasi.</p>
-      <span class="tag">Moodle REST API</span><span class="tag">RAG</span>
-    </div>
-    <div class="proj">
-      <h3>Student Registration Website</h3>
-      <p class="prose">Website pendaftaran siswa baru dengan antarmuka, fitur pendaftaran, dan pengelolaan informasi pendaftaran.</p>
-      <span class="tag">Web</span>
-    </div>
-    <div class="proj">
-      <h3>Paketin.id — Capstone Project</h3>
-      <p class="prose">Proyek akhir Studi Independen Asah (Dicoding x Accenture): pengembangan aplikasi web melalui kolaborasi tim.</p>
-      <span class="tag">Web App</span><span class="tag">Team Project</span>
+    <div class="pcards">
+    <article class="pcard" data-reveal>
+      <div class="pcard-logo"><img src="assets/images/logos/gunadarma.png" alt="Logo Universitas Gunadarma" loading="lazy" data-fallback="UG"></div>
+      <div class="pcard-body">
+        <p class="pcard-eyebrow">Skripsi · Universitas Gunadarma</p>
+        <h3>AI-Powered Web Chatbot Integrated with Moodle</h3>
+        <p class="text-secondary">Chatbot berbasis web yang terintegrasi dengan Moodle REST API menggunakan pendekatan Retrieval-Augmented Generation (RAG). Mencakup analisis kebutuhan, frontend, backend, integrasi API, dan pengujian aplikasi.</p>
+        <div><span class="tag">Moodle REST API</span><span class="tag">RAG</span><span class="tag">Web App</span></div>
+        <div class="pcard-links"><a class="link-accent" href="https://lms.smpn167jakarta.sch.id/" target="_blank" rel="noopener">Live demo <i class="bi bi-arrow-up-right"></i></a></div>
+      </div>
+    </article>
+    <article class="pcard" data-reveal>
+      <div class="pcard-logo"><img src="assets/images/logos/yayasan-albarkah.png" alt="Logo Yayasan Al Barkah Katimaha" loading="lazy" data-fallback="AB"></div>
+      <div class="pcard-body">
+        <p class="pcard-eyebrow">Yayasan Al Barkah Katimaha</p>
+        <h3>Student Registration Website</h3>
+        <p class="text-secondary">Website pendaftaran siswa baru dengan antarmuka, fitur pendaftaran, dan pengelolaan informasi pendaftaran.</p>
+        <div><span class="tag">Web</span></div>
+        <div class="pcard-links"><a class="link-accent" href="https://hitzpro.github.io/Yayasan-Albarkah-Katimaha/" target="_blank" rel="noopener">Live demo <i class="bi bi-arrow-up-right"></i></a></div>
+      </div>
+    </article>
+    <article class="pcard" data-reveal>
+      <div class="pcard-logo"><img src="assets/images/logos/dicoding.png" alt="Logo Dicoding" loading="lazy" data-fallback="dc"></div>
+      <div class="pcard-body">
+        <p class="pcard-eyebrow">Studi Independen Asah · Dicoding x Accenture</p>
+        <h3>Paketin.id — Capstone Project</h3>
+        <p class="text-secondary">Proyek akhir Studi Independen Asah: pengembangan aplikasi web melalui kolaborasi tim.</p>
+        <div><span class="tag">Web App</span><span class="tag">Team Project</span></div>
+        <div class="pcard-links"><a class="link-accent" href="https://paketin-my-id.vercel.app/" target="_blank" rel="noopener">Live demo <i class="bi bi-arrow-up-right"></i></a></div>
+      </div>
+    </article>
+    <article class="pcard" data-reveal>
+      <div class="pcard-logo"><img src="assets/images/logos/mushola.png" alt="Logo Mushola" loading="lazy" data-fallback="nh"></div>
+      <div class="pcard-body">
+        <p class="pcard-eyebrow">Pengajian Mushola Nurul Hidayah</p>
+        <h3>Yuk Ngaji Siswa</h3>
+        <p class="text-secondary">Website untuk membantu siswa mengikuti pengajian di mushola.</p>
+        <div><span class="tag">Web App</span></div>
+        <div class="pcard-links"><a class="link-accent" href="https://yuk-ngaji-siswa.vercel.app/" target="_blank" rel="noopener">Live demo <i class="bi bi-arrow-up-right"></i></a></div>
+      </div>
+    </article>
     </div>
 
-    <h3 class="sub-title">Repository GitHub</h3>
-    <div id="repo-state" class="text-secondary" role="status">Memuat repository…</div>
+    <h3 class="sub-title">GitHub</h3>
+    <div id="gh-dash" class="gh-dash" aria-live="polite"></div>
+    <div id="repo-state" class="small text-secondary" role="status">Memuat repository…</div>
     <div id="repo-list" class="row g-3"></div>
   </div>
 </section>

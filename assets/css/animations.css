@@ -1,0 +1,37 @@
+(() => {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return; // semua konten tampil statis
+  window.addEventListener("load", () => {
+    if (!window.gsap || !window.ScrollTrigger) return; // konten tetap terbaca tanpa GSAP
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from("#home .hero-in", { opacity: 0, y: 16, duration: .7, stagger: .09, ease: "power2.out", clearProps: "transform" });
+    gsap.utils.toArray("[data-reveal]").forEach(el =>
+      gsap.from(el, { opacity: 0, y: 20, duration: .6, ease: "power2.out", clearProps: "transform", scrollTrigger: { trigger: el, start: "top 90%", once: true } }));
+
+    gsap.matchMedia().add("(min-width: 992px)", () => {
+      gsap.utils.toArray("[data-parallax]").forEach(el =>
+        gsap.to(el, { yPercent: parseFloat(el.dataset.parallax), ease: "none", scrollTrigger: { trigger: "#home", start: "top top", end: "bottom top", scrub: true } }));
+    });
+
+    // Experience: section dipin, tiap scroll memunculkan satu pengalaman lalu poinnya fade in satu per satu.
+    const sec = document.getElementById("experience");
+    const jobs = gsap.utils.toArray("#experience .job");
+    if (!sec || !jobs.length) return;
+    sec.classList.add("exp-js");
+    const navs = gsap.utils.toArray(".exp-nav li"), count = sec.querySelector(".exp-count"), N = jobs.length, D = 2.2;
+    gsap.set(jobs, { autoAlpha: 0 }); gsap.set(jobs[0], { autoAlpha: 1 });
+    gsap.set("#experience .job li", { autoAlpha: 0, y: 10 });
+    const setActive = i => { navs.forEach((n, k) => n.classList.toggle("active", k === i)); if (count) count.textContent = `0${i + 1} / 0${N}`; };
+    const tl = gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: {
+      trigger: sec, start: "top top+=56", end: () => "+=" + Math.round(innerHeight * N * .8), pin: true, scrub: .4, anticipatePin: 1, invalidateOnRefresh: true,
+      snap: { snapTo: "labels", duration: { min: .15, max: .4 }, ease: "power1.inOut" },
+      onUpdate: self => setActive(Math.min(N - 1, Math.floor(self.progress * N)))
+    } });
+    jobs.forEach((job, i) => {
+      const t = i * D;
+      if (i > 0) { tl.to(jobs[i - 1], { autoAlpha: 0, y: -12, duration: .4 }, t).fromTo(job, { autoAlpha: 0, y: 12 }, { autoAlpha: 1, y: 0, duration: .4 }, t); }
+      tl.to(job.querySelectorAll("li"), { autoAlpha: 1, y: 0, duration: .3, stagger: .25 }, t + (i ? .4 : .1));
+      tl.addLabel("j" + i, t + D - .3);
+    });
+    tl.to({}, { duration: 0 }, N * D);
+  });
+})();
