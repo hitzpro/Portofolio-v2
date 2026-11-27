@@ -3,7 +3,7 @@ const CONFIG = {
   githubUsername: "hitzpro",
   // Nama repository yang ingin ditampilkan, sesuai urutan tampil.
   // Kosongkan array untuk menampilkan repository terbaru secara otomatis.
-  selectedRepos: ["YukNgaji-Siswa-Edition"],
+  selectedRepos: ["YukNgaji-Siswa-Edition","invitation-maker-v1"],
   // Repository unggulan (diberi penanda "Featured").
   featuredRepos: [],
   // Jumlah maksimal repository yang ditampilkan.
